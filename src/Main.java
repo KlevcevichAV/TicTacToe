@@ -74,7 +74,7 @@ public class Main {
             if (checkWin != '-') {
                 playingField.showPlayingField();
                 String nameWinner = (checkWin == firstPlayer.getSign()) ? firstPlayer.getName() : secondPlayer.getName();
-                System.out.println("Congratulations!" + nameWinner + " with a victory!");
+                System.out.println("Congratulations! " + nameWinner + " with a victory!");
                 return;
             }
 
@@ -84,12 +84,10 @@ public class Main {
 
     public static void game() {
         PlayingField playingField = new PlayingField();
-        Player firstPlayer = null;
-        Player secondPlayer = null;
-        boolean choiceCounterPlayers = inputChoice("Игра с компьютером или с другим человеком?\n1. С другим человеком;\n2. С компьютером.");
-        boolean choiceSaveNamesPlayers = inputChoice("Желаете ввести имя?\n1. Да;\n2. Нет.");
-        firstPlayer = createPlayers(true, choiceSaveNamesPlayers, 'X');
-        secondPlayer = createPlayers(choiceCounterPlayers, choiceSaveNamesPlayers, 'O');
+        boolean choiceCounterPlayers = inputChoice("Play with a computer or a human?\n1. Man;\n2. Computer.");
+        boolean choiceSaveNamesPlayers = inputChoice("Would you like to enter a name?\n1. Yes;\n2. No.");
+        Player firstPlayer = createPlayers(true, choiceSaveNamesPlayers, 'X');
+        Player secondPlayer = createPlayers(choiceCounterPlayers, choiceSaveNamesPlayers, 'O');
         start(playingField, firstPlayer, secondPlayer);
     }
 
