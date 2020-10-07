@@ -1,3 +1,7 @@
+package Player;
+
+import Player.Player;
+
 import java.util.Scanner;
 
 public class LivePlayer implements Player {
@@ -6,11 +10,7 @@ public class LivePlayer implements Player {
 
     @Override
     public String getName() {
-        if (name.equals("")) {
-            return null;
-        } else {
-            return name;
-        }
+        return name;
     }
 
     @Override
@@ -18,8 +18,8 @@ public class LivePlayer implements Player {
         return sign;
     }
 
-    public LivePlayer(char sign) {
-        name = "";
+    public LivePlayer(char sign, int index) {
+        name = "Player " + index;
         this.sign = sign;
     }
 

@@ -1,3 +1,5 @@
+package Player;
+
 public interface Player {
     String getName();
 
