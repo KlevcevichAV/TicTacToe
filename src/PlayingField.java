@@ -8,6 +8,17 @@ public class PlayingField {
         }
     }
 
+    public int checkFreedom(String move){
+        if(move.length() != 1) return -1;
+        if(move.charAt(0) < '0' || move.charAt(0) > '9') return -1;
+        int index = Integer.parseInt(move);
+        if(playingField[index] == index + '0'){
+            return 0;
+        }else {
+            return 1;
+        }
+    }
+
     public void setValue(int index, char value) {
         playingField[index - 1] = value;
     }
