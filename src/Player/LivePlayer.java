@@ -32,7 +32,7 @@ public class LivePlayer implements Player {
     public String makeMove() {
         Scanner in = new Scanner(System.in);
         String move = "";
-        System.out.println("Введите поле для хода.");
+        System.out.print("Enter the field for the move: ");
         move = in.nextLine();
         return move;
     }
